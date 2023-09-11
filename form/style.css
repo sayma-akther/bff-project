@@ -1,20 +1,25 @@
-.container{
-  margin: 20px 300px;
-  padding: 15px 50px;
-  font-size: 18px;
-  background-color: #e6f3ff;
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 
 }
-h2{
+
+h2 {
   text-align: center;
 }
-.name{
-  width: 90%;
-  border: none;
-  padding: 8px 10px;
-  border-radius: 10px;
+
+.name {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
-.reset{
+
+.reset {
   width: 100px;
   border: none;
   color: white;
@@ -23,7 +28,8 @@ h2{
   padding: 10px;
   margin-right: 20px;
 }
-.save{
+
+.save {
   width: 100px;
   border: none;
   color: white;
