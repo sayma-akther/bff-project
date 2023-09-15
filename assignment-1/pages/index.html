@@ -12,24 +12,40 @@
   <script src="../assets/js/jQuery-3.7.1.min.js"></script>
   <link rel="stylesheet" href="../assets/css/jquery-confirm.min.css">
   <script src="../assets/js/jquery-confirm.min.js"></script>
-  
+  <script src="../assets/js/lib/pweb.message.box.js"></script>
+
 
   <script>
+    // confirmation
     jQuery(document).ready(function () {
 
-        jQuery(".success").confirm({
-            title: 'Confirmation!',
-            content: 'Your registration is successfull!'
-        })
+      jQuery(".log-in").confirm({
+        title: 'Confirmation!',
+        content: 'Do you want to log in?'
+      })
 
     });
+    //flash massege
+
+    jQuery(document).ready(function () {
+
+
+      jQuery(".show-success-flash").click(function () {
+        PWeb.messageBox.showMessage(true, "Your ragistration is succsessful")
+      })
+
+
+
+
+    });
+
   </script>
 
 
 </head>
 
 <body>
-  <div class="card border-1 overflow-hidden mt-5 mb-5">
+  <div class="card border-0 overflow-hidden mt-5 mb-5">
     <div class="card-body">
 
       <form class="row g-3 text-start needs-validation" novalidate method="post" action="/registration">
@@ -68,14 +84,14 @@
           <label class="form-label text-secondary fw-semibold">
             Email
           </label>
-          <input type="email" name="email" value=""  class="form-control  False">
+          <input type="email" name="email" value="" class="form-control  False">
         </div>
         <!--  Emergency Contact  -->
         <div class="col-md-4">
           <label class="form-label text-secondary fw-semibold">
             Emergency Contact
           </label>
-          <input type="text" name="emergency" value=""  class="form-control  False">
+          <input type="text" name="emergency" value="" class="form-control  False">
         </div>
         <!-- Home District -->
         <div class="col-md-4">
@@ -89,7 +105,7 @@
             Home District
           </label>
           <select name="homeDistrict" required class="form-select searchable-select False">
-            
+
 
 
             <option value="">Select</option>
@@ -116,14 +132,14 @@
           <label class="form-label text-secondary fw-semibold">
             Study In (Diploma Engineering)
           </label>
-          <input type="text" name="study" value=""  class="form-control  False">
+          <input type="text" name="study" value="" class="form-control  False">
         </div>
         <!-- institute -->
         <div class="col-md-6">
           <label class="form-label text-secondary fw-semibold">
             Institute Name
           </label>
-          <input type="text" name="institute" value=""  class="form-control  False">
+          <input type="text" name="institute" value="" class="form-control  False">
         </div>
         <!-- technology -->
         <div class="col-md-4">
@@ -131,7 +147,7 @@
 
             Technology
           </label>
-          <select name="technology"  class="form-select searchable-select False">
+          <select name="technology" class="form-select searchable-select False">
 
 
             <option value="">Technology</option>
@@ -157,7 +173,7 @@
           <label class="form-label text-secondary fw-semibold">
             Semister (8th)
           </label>
-          <input type="text" name="semister" value=""  class="form-control  False">
+          <input type="text" name="semister" value="" class="form-control  False">
         </div>
         <!-- shift -->
         <div class="col-md-4">
@@ -165,7 +181,7 @@
 
             Shift
           </label>
-          <select name="shift"  class="form-select searchable-select False">
+          <select name="shift" class="form-select searchable-select False">
 
 
             <option value="">Shift</option>
@@ -204,9 +220,9 @@
         </div>
         <!-- button -->
         <div class="text-center bangla-text">
-          <button class="btn btn-primary success" type="submit">রেজিস্ট্রেশন</button>
-          <a href="/login" class="btn btn-secondary ms-3" type="button">লগ ইন</a>
-      </div>
+          <button class="btn btn-primary show-success-flash" type="submit">রেজিস্ট্রেশন</button>
+          <a href="/login" class="btn btn-secondary ms-3 log-in" type="button">লগ ইন</a>
+        </div>
 
       </form>
 
