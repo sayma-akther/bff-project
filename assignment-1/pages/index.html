@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
   <script src="../assets/js/bootstrap.bundle.min.js"></script>
   <!-- jquary -->
-  <script src="../assets/js/jQuery-3.7.1.min.js"></script>
+  
   <link rel="stylesheet" href="../assets/css/jquery-confirm.min.css">
   <script src="../assets/js/jquery-confirm.min.js"></script>
   <script src="../assets/js/lib/pweb.message.box.js"></script>
@@ -45,7 +45,7 @@
 </head>
 
 <body>
-  <div class="card border-0 overflow-hidden mt-5 mb-5">
+  <div class="card border-0 overflow-hidden m-5 pr-5 pl-5">
     <div class="card-body">
 
       <form class="row g-3 text-start needs-validation" novalidate method="post" action="/registration">
@@ -226,7 +226,29 @@
 
       </form>
 
-      <script src="../assets/js/bootstrap-form-validator.js"></script>
+      <!-- <script src="../assets/js/bootstrap-form-validator.js"></script> -->
+      <script src="../assets/js/jQuery-3.7.1.min.js"></script>
+
+
+      <script>
+        jQuery(document).ready(function () {
+            let forms = document.querySelectorAll('.needs-validation')
+            let form = forms[0]
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                } else {
+                    PWeb.messageBox.showMessage(true, "Registration Success")
+                    form.reset()
+                    event.preventDefault()
+                    event.stopPropagation()
+                    return false
+                }
+                form.classList.add('was-validated')
+            }, false)
+        });
+    </script>
 </body>
 
 </html>
