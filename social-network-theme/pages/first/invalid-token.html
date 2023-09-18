@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Set Password Form</title>
+    <title>Invalid token page</title>
 
     <link rel="stylesheet" href="../../assests/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assests/css/auth-base.css">
@@ -31,34 +31,16 @@
             <!-- ============ Right Section ============ -->
             <div class="w-100 mx-auto">
                 <div class="card br-card rounded-0 shadow-lg p-3 auth-max-w-fixed mx-auto mt-3">
-                   <!-- ============ Reset-Password Form ============ -->
-                   <form action="#" class="row g-3 needs-validation" novalidate>
-                    <div class="col-12">
-                        <input type="password" class="form-control" placeholder="New Password" required>
-                        <div class="invalid-feedback">
-                            You entered a wrong password
-                        </div>
+                  <!-- ============ Invalid Token Section ============ -->
+                  <div class="card-body">
+                    <div class="text-center mb-4">
+                        <h2 class="mt-2 fw-bold auth-title text-danger">Reset Failed!</h2>
+                        <p>Your password reset link is invalid or the link you clicked has been expired. Please
+                            reset again.</p>
+                        <a href="#" class="btn btn-primary">Reset again</a>
                     </div>
-                    <div class="col-12">
-                        <input type="password" class="form-control" placeholder="Confirm Password" required>
-                        <div class="invalid-feedback">
-                            You entered a wrong password
-                        </div>
-                        <div class="form-text">Confirm password must be same as new password</div>
-                    </div>
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">
-                            Set Password
-                        </button>
-                        <hr class="mt-3 mb-1">
-                    </div>
-                    <div class="text-center">
-                        <a href="#" class="btn btn-success">
-                            Login
-                        </a>
-                    </div>
-                </form>
-                <!-- ============ End of Reset-Password Form ============ -->
+                </div>
+                <!-- ============ End of Invalid Token Section ============ -->
                 </div>
             </div>
             <!-- ============ End of Right Section ============ -->
